@@ -1,0 +1,28 @@
+@import './colors.scss';
+@import './hovers.scss';
+@import './adaptive.scss';
+
+@mixin auth-button {
+    width: 260px;
+    height: 60px;
+    border: 0;
+    @include subtitle;
+    border-radius: 10px;
+    color: $primary-button-text-color;
+    filter: drop-shadow(5px 5px 30px rgba(84, 157, 241, 0.25));
+    background-image: linear-gradient(to right, $button-gradient-first, $button-gradient-second);
+
+    &:hover {
+        @include default-hover;
+    }
+
+    @include laptop {
+        width: 210px;
+    }
+}
+
+@mixin form-link-button {
+    font-size: 12px;
+    text-decoration: none;
+    color: $secondary-button-text-color;
+}

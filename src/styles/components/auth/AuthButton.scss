@@ -1,0 +1,5 @@
+@import '../../mixins/utils.scss';
+
+.auth-button {
+    @include auth-button;
+}

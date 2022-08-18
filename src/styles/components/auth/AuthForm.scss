@@ -1,0 +1,95 @@
+@import '../../mixins/utils.scss';
+
+.login-form, .registration-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 500px;
+    box-sizing: border-box;
+
+    @include laptop {
+        width: 400px;
+    }
+
+    @include tablets {
+        width: 300px;
+    }
+
+    &__body {
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: $form-background-color;
+
+        @include tablets {
+            padding: 15px;
+        }
+
+        &__actions {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__link {
+                @include subtitle;
+                color: $secondary-text-color;
+                
+                &:hover {
+                    color: $link-hover-color;
+                }
+            }
+        }
+
+        &__inputs {
+            min-width: 0;
+            padding: 0;
+            border: 0;
+
+            &__title {
+                @include title;
+                color: $primary-text-color;
+            }
+            
+            &__input {
+                height: 60px;
+                width: calc(100% - 30px);
+                padding-left: 25px;
+                margin-top: 10px;
+                margin-bottom: 25px;
+                border-radius: 10px;
+                background-color: $input-background-color;
+                @include subtitle;
+                border: 1px solid $input-border-color;
+            }
+        }
+    }
+
+    &__actions {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        margin-top: 45px;
+
+        @include tablets {
+            padding: 15px;
+            margin-top: 10px;
+            flex-direction: column;
+        }
+        
+        &__redirect {
+            @include subtitle;
+            white-space: nowrap;
+            margin-left: 45px;
+            @include form-link-button;
+
+            @include tablets {
+                margin-left: 0px;
+                margin-top: 25px;
+            }
+        }
+    }
+}
