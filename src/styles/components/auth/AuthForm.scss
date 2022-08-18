@@ -21,6 +21,7 @@
         padding: 30px;
         box-sizing: border-box;
         border-radius: 10px;
+        box-shadow: 0px 0px 30px rgba(170, 173, 178, 0.25);
         background-color: $form-background-color;
 
         @include tablets {
@@ -82,9 +83,10 @@
         
         &__redirect {
             @include subtitle;
+            @include form-link-button;
+            font-size: 16px;
             white-space: nowrap;
             margin-left: 45px;
-            @include form-link-button;
 
             @include tablets {
                 margin-left: 0px;
